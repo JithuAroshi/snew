@@ -1,0 +1,76 @@
+<div class="h-max w-full mb-32 p-3  md:p-24 flex justify-center items-center ">
+  <div class="h-max w-full md:h-[600px] md:w-[990px] flex flex-col md:flex-row" >
+
+    <div class="md:h-full md:w-[53%]">
+    <div class="h-max w-max flex flex-col gap-[2px] p-6 md:hidden">
+      <p class="text-red-800 text-sm ">Member Access</p>
+      <h2 class="text-2xl font-normal">{{array.data.title}}</h2>
+      <p class="text-xs">Older Kids' Shoes</p>
+
+      <p class="text-sm mt-2">MRP : ${{array.data.discountrate}}</p>
+      <p class="text-xs text-gray-500">incl.of taxes</p>
+      <p class="text-xs text-gray-500">(Also includes all applicable duties)</p>
+    </div>
+
+    <div class="h-full w-full flex justify-center items-center md:w-full ">
+  <img class="h-72 w-80 object-cover rounded-md border-[1px] border-black md:h-full md:w-full " src="{{array.data.postImgPath}}" alt="">
+</div>
+</div>
+
+<div class="md:h-full md:w-[47%] md:px-12 md:pr-[7.5625rem] ">
+
+  <div class="hidden h-max w-max md:flex flex-col gap-[2px] p-6 md:p-0">
+    <p class="text-red-800 text-sm md:text-base">Member Access</p>
+    <h2 class="text-2xl font-normal md:text-3xl">{{array.data.title}}</h2>
+    <p class="text-xs md:text-base" [innerHTML]="array.data.content"></p>
+
+    <p class="text-sm mt-2 md:text-base md:mt-4">MRP : ${{array.data.discountrate}}</p>
+    <p class="text-xs text-gray-500 md:text-sm">incl.of taxes</p>
+    <p class="text-xs text-gray-500 md:text-sm">(Also includes all applicable duties)</p>
+  </div>
+
+<div class="h-80 w-full pt-4 ">
+<div class="flex justify-between items-end pb-1 px-9 h-max w-full md:px-0">
+<p class="text-sm text-gray-800 md:text-sm md:font-medium">Select Size</p>
+<p class="text-xs text-gray-500 md:text-sm">Size Guides</p>
+</div>
+
+
+<div class="h-max w-full flex justify-center items-center ">
+  <div class="w-[85%] flex flex-wrap justify-start pl-2 gap-1 md:w-full md:pl-0 ">
+    <button class="h-10 w-24 text-sm text-black/90 flex justify-center items-center border-[1px] border-black rounded focus:bg-black/90 focus:text-white">UK 3.5</button>
+    <button class="h-10 w-24 text-sm text-black/90 flex justify-center items-center border-[1px] border-black rounded focus:bg-black/90 focus:text-white">UK 3</button>
+    <button class="h-10 w-24 text-sm text-black/90 flex justify-center items-center border-[1px] border-black rounded focus:bg-black/90 focus:text-white">UK 4</button>
+    <button class="h-10 w-24 text-sm text-black/90 flex justify-center items-center border-[1px] border-black rounded focus:bg-black/90 focus:text-white">UK 4.5</button>
+    <button class="h-10 w-24 text-sm text-black/90 flex justify-center items-center border-[1px] border-black rounded focus:bg-black/90 focus:text-white">UK 5</button>
+    <button class="h-10 w-24 text-sm text-black/90 flex justify-center items-center border-[1px] border-black rounded focus:bg-black/90 focus:text-white">UK 5.5</button>
+    <button class="h-10 w-24 text-sm text-black/90 flex justify-center items-center border-[1px] border-black rounded focus:bg-black/90 focus:text-white">UK 6 (EU 39)</button>
+    <button class="h-10 w-24 text-sm text-black/90 flex justify-center items-center border-[1px] border-black rounded focus:bg-black/90 focus:text-white">UK 6 (EU 40)</button>
+  </div>
+</div>
+
+<div class="px-8 mt-5 md:px-0">
+
+<button (click)="addtocart(array)" class=" h-14 w-full flex justify-center items-center rounded-full mt-2 bg-black/90 border-[1px] text-white border-black active:bg-white">
+Add To Bag
+</button>
+
+<button class="flex justify-center items-center gap-2 h-14 w-full rounded-full mt-2 border-[1px] border-black">
+  <p>Favourite</p>
+  <span class="material-symbols-rounded ">
+    favorite
+    </span>
+</button>
+
+</div>
+
+<div class="w-full h-max  pt-3">
+  <p class="w-full text-sm text-gray-500 flex justify-center text-center">This product is excluded from site promotions and discounts.</p>
+</div>
+</div>
+
+
+</div>
+
+  </div>
+</div>

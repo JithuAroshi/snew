@@ -1,0 +1,111 @@
+<div class="h-max w-full p-4 pb-24">
+
+  <ng-container *ngIf="array.length == 0" >
+    <div class="h-full w-full flex flex-col justify-center items-center">
+      <div class="mt-28">
+        <img src="../../assets/Image/cartempty.jpg" alt="">
+      </div>
+      <button routerLink="/home" class="h-max w-max py-2 px-3 text-lg md:font-medium rounded-md md:py-4 md:px-7 bg-black/90 text-white">Shop Now</button>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="array.length != 0" >
+    <div class="h-max w-full flex justify-center items-center " >
+
+      <div class="h-max w-full flex flex-col gap-2 md:flex-row md:w-[70%] md:gap-4 ">
+
+        <!-- --------------------------------------check-delivery---------------------------------- -->
+
+        <div class="h-max w-full flex flex-col gap-2 md:gap-6">
+
+    <div class="h-max w-full flex justify-between items-center p-3 border-[1px] border-black md:p-6">
+      <p class="text-xs font-bold md:text-base">Check delivery time & service</p>
+      <button class="h-max w-max p-2 text-[8px] text-black/90 border-black/90 rounded-sm font-extrabold border-[1px] md:text-[10px]">ENTER PIN CODE</button>
+    </div>
+
+    <!-- -----------------------------------available-offer---------------------------------------- -->
+
+    <div class="h-max w-full flex flex-col p-3 gap-2 border-[1px] border-black md:p-6 md:gap-3">
+      <p class="text-xs font-bold md:text-base">Available Offers</p>
+      <p class="text-[10px] md:text-sm">10% Instant Discount on Kotak Credit and Debit Cards on a minimum spend of Rs 3,000.TCA</p>
+      <p *ngIf="Onshow!" class="text-[10px] md:text-sm">10% Instant Discount on Kotak Credit and Debit Cards on a minimum spend of Rs 3,000.TCA</p>
+      <p *ngIf="Onshow!" class="text-[10px] md:text-sm">10% Instant Discount on Kotak Credit and Debit Cards on a minimum spend of Rs 3,000.TCA</p>
+      <p *ngIf="Onshow!" class="text-[10px] md:text-sm">10% Instant Discount on Kotak Credit and Debit Cards on a minimum spend of Rs 3,000.TCA</p>
+
+      <button (click)="show()" class="h-max w-max text-xs font-semibold md:text-sm">show More</button>
+
+    </div>
+
+    <!-- --------------------------------------------------------------------item-------------------------------------------------------------------- -->
+
+    <div class="h-max w-full flex p-3 gap-2 border-[1px] md:gap-4 border-black" *ngFor="let item of array" >
+
+    <div class="h-28 w-[30%] md:h-32">
+      <img class="h-full w-full object-cover" src="{{item.data.postImgPath}}" alt="">
+    </div>
+
+    <div class="h-full w-[70%] flex flex-col gap-[5px]">
+      <h3 class="text-sm font-bold md:text-base">{{item.data.category.category}}</h3>
+      <P class="text-xs md:text-sm">{{item.data.title}}</P>
+      <P class="text-[10px] text-gray-500 md:text-[12px]">Sold by:ASIAN RETAIL VENTURIES</P>
+    <div class="flex gap-3 text-sm">
+      <p class="font-bold md:text-base">{{item.data.discountrate}}</p>
+      <p class="text-gray-500 line-through md:text-base">${{item.data.orginalrate}}</p>
+      <p class="text-green-500 md:text-base">20% OFF</p>
+    </div>
+    <p class="text-xs text-gray-700 font-light md:text-sm md:font-normal"> <span class="font-medium text-black">14 days </span> return available</p>
+    </div>
+    <button (click)="delectitem(item)" class="h-max w-max -mt-1 ">X</button>
+
+    </div>
+
+    <!-- -------------------------------------------------------------items-end--------------------------------------------------------------------- -->
+
+    </div>
+
+    <!-- -----------------------------------------price-details-------------------------------- -->
+
+    <div class="h-max w-full ">
+
+    <div class="h-max w-full flex flex-col p-3 pr-6 gap-2 border-[1px] border-black md:p-6">
+
+      <div class="text-xs font-bold md:text-[15px]">PRICE DETAILS <span>(1 Item)</span> </div>
+      <div class="h-max w-full flex justify-between">
+        <p class="text-sm text-gray-800 md:text-[15px]">Total MRP</p>
+        <p class="text-sm text-black md:text-[15px]">$ {{grandtotal}}</p>
+      </div>
+      <div class="h-max w-full flex justify-between">
+        <p class="text-sm text-gray-800 md:text-[15px]">Discount on MRP</p>
+        <p class="text-sm text-green-600 md:text-[15px]">-${{totaldiscount}}</p>
+      </div>
+      <div class="h-max w-full flex justify-between">
+        <p class="text-sm text-gray-800 md:text-[15px]">Coupon Discount</p>
+        <button class="text-xs text-black/90  md:text-[15px]">Apply Coupon</button>
+      </div>
+      <div class="h-max w-full flex justify-between">
+        <p class="text-sm text-gray-800 md:text-[15px]">Convenience Fee</p>
+         <div class="flex justify-center items-center gap-1">
+          <p class="text-sm text-black line-through md:text-[15px]">$99</p>
+          <p class="text-sm text-green-600 md:text-[15px]">FREE</p>
+        </div>
+      </div>
+      <div class="h-max w-full flex flex-col justify-between pt-3 mt-1 border-t-[1px] border-black">
+    <div class="w-full flex justify-between ">
+      <p class="text-sm font-bold text-gray-800 md:text-[15px]">Total Amount</p>
+      <p class="text-sm font-bold text-black md:text-[15px]">$ {{grandtotal}}</p>
+    </div>
+    <button class="h-max w-full flex justify-center items-center p-3 text-sm font-bold rounded-sm mt-4 bg-black/90 text-white active:bg-white active:text-black active:border-2 active:border-black md:text-[15px]">
+    PLACE ORDER
+    </button>
+      </div>
+
+      </div>
+
+    </div>
+
+      </div>
+
+    </div>
+  </ng-container>
+
+</div>

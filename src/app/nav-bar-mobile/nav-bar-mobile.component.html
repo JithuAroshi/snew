@@ -1,0 +1,30 @@
+
+<div class="h-max w-screen fixed bottom-3 left-0 flex justify-center items-center z-50">
+
+  <div class=" h-16 w-[90%] rounded-2xl flex justify-between items-center  px-10 text-3xl  bg-black/90 md:hidden">
+    <div class="home">
+      <span routerLink="home" class="material-symbols-rounded text-3xl text-white">
+        home
+        </span>
+    </div>
+    <div class="favorite">
+      <span class="material-symbols-rounded text-3xl text-white">
+        favorite
+        </span>
+    </div>
+    <div routerLink="/cart" class="bag flex relative">
+      <span class="material-symbols-rounded text-3xl text-white">
+        local_mall
+        </span>
+        <p *ngIf="idcount != 0" class="flex justify-center items-center rounded h-6 w-max px-1 bg-red-500/80 text-[19px] absolute top-[-8px] right-[-8px]">{{idcount}}</p>
+    </div>
+    <div class="me">
+      <span class="material-symbols-rounded text-3xl text-white">
+        sentiment_very_satisfied
+        </span>
+    </div>
+  </div>
+
+
+</div>
+

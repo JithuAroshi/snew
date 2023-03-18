@@ -1,0 +1,288 @@
+<div class="h-full w-full md:pb-0 bg-white overflow-hidden">
+
+<!------------------------------------------------------------------------Main------------------------------------------------------------------------------------------ -->
+
+<div class="h-full w-full ">
+
+  <!-- ---------------------------------------------------------------------Main-special-Offer------------------------------------------------------------------------------- -->
+
+  <div class="h-[290px] w-max md:w-full md:h-[880px] flex justify-center items-center relative">
+    <div class="h-full w-52 md:w-[33.3%] ">
+      <img class="object-cover h-full w-full" src="../../assets/Image/navbar3.jpg" alt="">
+    </div>
+    <div class="h-full w-0 md:w-[33.3%] ">
+      <img class="object-cover h-full w-full" src="../../assets/Image/navbar2.jpg" alt="">
+    </div>
+    <div class="h-full w-52 md:w-[33.3%] ">
+      <img class="object-cover h-full w-full" src="../../assets/Image/navbarpic1.jpg" alt="">
+    </div>
+
+    <div class="hidden md:block h-max w-full px-6 absolute top-0 ">
+      <app-nav-bar></app-nav-bar>
+    </div>
+  </div>
+
+  <!-- -------------------------------------------------------------------------Main-Catagory---------------------------------------------------------------------------------- -->
+
+<div class="h-[600px] md:h-[1000px] w-full  bg-gradient-to-b from-[rgb(222,205,177)] to-white " >
+  <div class="h-7 w-full pt-16 mb-10 text-4xl text-black/90 font-extrabold flex justify-center items-center md:text-8xl md:pt-48 ">
+    <h2 class=" px-12 border-b-[1px] md:border-b-2 md:px-28 md:pb-3 border-black">CATEGORY</h2>
+  </div>
+  <div class=" w-full h-fit flex flex-wrap justify-center items-center pt-4 md:mt-24 md:justify-center md:items-center ">
+  <div class="w-fit h-fit p-[1.0625em] md:p-8 " *ngFor="let cato of catogory">
+    <div class="h-44 w-36 hover:scale-[1.1] md:h-96 md:w-80 border-[1px] border-black rounded-xl" >
+      <img class="pic h-full w-full object-cover rounded-xl  drop-shadow-12xl md:drop-shadow-13xl" [src]="cato.img">
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="h-max w-full  py-12 md:py-48 text-4xl text-black/90 font-[1000] flex justify-center items-center gap-14 flex-col md:text-[120px] md:mb-48 bg-black/10">
+  <div class="h-max w-full md:w-max flex flex-col justify-center items-center md:justify-start md:items-start gap-2 md:gap-28">
+    <p class="w-max h-max flex  md:pl-[104px] md:pb-3 md:hover:pl-[810px] duration-1000 ">CONFORTABLE</p>
+  <p class="w-max h-max md:pl-[510px] md:pb-3 md:hover:pl-[590px] duration-1000 text-white">NATURAL</p>
+  <p class="w-max h-max md:pl-[680px] md:pb-3 md:hover:pl-[0px] duration-1000 ">RESPONSIBLE</p>
+  </div>
+
+<div class="h-max w-full p-5 md:p-64">
+    <div class="h-full w-full">
+      <img class="h-full w-full object-cover" src="../../assets/Image/mainshoe2.jpg" alt="">
+    </div>
+</div>
+
+  <div class="h-max w-full flex gap-12 md:gap-0 flex-col md:flex-row">
+    <div class="h-max w-full md:w-1/2  flex flex-col justify-center gap-3 md:gap-14 ">
+      <div class="h-max w-full flex justify-center items-center md:justify-end md:items-center text-5xl md:text-[170px]">SNEW</div>
+    <div class="h-max w-full flex justify-center items-center md:justify-end md:items-center text-5xl md:text-[170px]">VISION</div>
+    </div>
+    <div class="h-max w-full md:w-1/2 md:p-24 md:pl-32 flex flex-col justify-center md:items-start items-center gap-5 md:gap-8">
+      <p class="h-max w-[60%] md:w-[60%] flex justify-center items-center text-center md:text-left text-base md:text-2xl leading-7 md:leading-loose font-normal">Create to better evolve, while respecting Men and Nature.</p>
+      <p class="h-max w-[60%] md:w-[60%] flex justify-center items-center text-center md:text-left text-base md:text-2xl leading-7 font-normal md:leading-loose">Our sneakers are designed from natural materials and recycled. All our products are produced locally in Portugal and France. 1% of our turnover is transferred to the League for the Protection of Birds, the first environmental defense association in France.</p>
+
+  <button class="h-max w-max p-2 md:p-3 px-4 md:px-6 mt-4 flex justify-center items-center gap-4 text-xs md:text-base font-normal border-[1px] border-green-600 rounded-full">
+    <div class="h-full w-max md:pt-[2px] flex justify-center items-center">
+      <span class="material-symbols-rounded text-base md:text-2xl text-green-600">
+      arrow_forward
+      </span>
+    </div>
+    <p class="pt-[2px] md:pt-0 text-green-600">See Our Value</p>
+  </button>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="h-7 w-full mt-16 text-black/90 font-extrabold flex justify-center items-center md:h-28 text-4xl md:text-9xl md:mt-48 md:mb-24">
+  <h2 class=" px-12 border-b-[1px] md:border-b-2 md:px-28 md:pb-3 border-black">AIR-JORTHAN</h2>
+</div>
+
+<!-- -----------------------------------------------------------------------------part-catogory--------------------------------------------------------------------------------->
+
+
+<div class="w-full gap-4 mt-6">
+
+  <div class="h-max w-full p-8 md:p-20 flex md:justify-center gap-72">
+    <div class="h-max w-full  md:w-[25%] flex flex-col gap-2 md:gap-4">
+      <div routerLink="/buggy-jeans/:id" class="h-96 md:h-[640px] w-full flex justify-center items-center bg-black/90">
+        <img class="h-full w-full object-cover md:hover:h-[85%] md:hover:w-[80%] duration-1000" src="../../assets/Image/jorthan3.webp" alt="">
+      </div>
+      <p class="md:hidden text-[10px] mt-3 text-green-600">LAINE RECYCLÉE - CAOUTCHOUC RECYCLÉ </p>
+      <p class="md:hidden text-[10px]">LA COLLECTION TERRA-E, UN DESIGN AUTHENTIQUE ET INTEMPOREL. UNE BASKET EN LAINE RECYCLÉE QUI VOUS OFFRE UN CONFORT INÉGALÉ.</p>
+    </div>
+    <div class="hidden md:block h-max md:h-96 md:w-[25%]">
+      <p class="mb-3 md:text-xs mt-3 text-green-600">LAINE RECYCLÉE - CAOUTCHOUC RECYCLÉ</p>
+      <p class="mb-6 md:text-xs">LA COLLECTION TERRA-E, UN DESIGN AUTHENTIQUE ET INTEMPOREL. UNE BASKET EN LAINE RECYCLÉE QUI VOUS OFFRE UN CONFORT INÉGALÉ.</p>
+      <div routerLink="/buggy-jeans/:id" class="h-96 md:h-[640px] w-full flex justify-center items-center bg-black/90">
+        <img class="h-full w-full object-cover md:hover:h-[85%] md:hover:w-[80%] duration-1000" src="../../assets/Image/jorthan5.webp" alt="">
+      </div>
+    </div>
+  </div>
+
+
+
+    <div class="h-7 w-full mt-16 mb-6 text-4xl text-black/90 font-extrabold flex justify-center items-center md:h-28 md:text-9xl md:mt-48 md:mb-24">
+      <h2 class=" px-12 border-b-[1px] md:border-b-2 md:px-28 md:pb-3 border-black">CONVERCE</h2>
+    </div>
+
+    <!-- ------------------------------------------------------------------2-------------------------------------------- -->
+    <div class="h-max w-full p-8 md:p-20 flex md:justify-center gap-72">
+      <div class="h-max w-full  md:w-[25%] flex flex-col gap-2 md:gap-4">
+        <button routerLink="/buggy-jeans/:id" class="h-96 md:h-[640px] w-full flex justify-center items-center bg-black/90">
+          <img class="h-full w-full object-cover md:hover:h-[85%] md:hover:w-[80%] duration-1000" src="../../assets/Image/shoeone2.jpg" alt="">
+        </button>
+        <p class="md:hidden text-[10px] mt-3 text-green-600">LAINE RECYCLÉE - CAOUTCHOUC RECYCLÉ</p>
+        <p class="md:hidden text-[10px]">LA COLLECTION TERRA-E, UN DESIGN AUTHENTIQUE ET INTEMPOREL. UNE BASKET EN LAINE RECYCLÉE QUI VOUS OFFRE UN CONFORT INÉGALÉ.</p>
+      </div>
+      <div class="hidden md:block h-max md:h-96 md:w-[25%]">
+        <p class="mb-3 md:text-xs mt-3 text-green-600">LAINE RECYCLÉE - CAOUTCHOUC RECYCLÉ</p>
+        <p class="mb-6 md:text-xs">LA COLLECTION TERRA-E, UN DESIGN AUTHENTIQUE ET INTEMPOREL. UNE BASKET EN LAINE RECYCLÉE QUI VOUS OFFRE UN CONFORT INÉGALÉ.</p>
+
+        <button routerLink="/buggy-jeans/:id" class="h-96 md:h-[640px] w-full flex justify-center items-center bg-black/90">
+          <img class="h-full w-full object-cover md:hover:h-[85%] md:hover:w-[80%] duration-1000" src="../../assets/Image/shoeone4.jpg" alt="">
+        </button>
+      </div>
+    </div>
+
+
+
+
+    <div class="h-7 w-full mt-16 mb-6 text-4xl text-black/90 font-extrabold flex justify-center items-center md:h-28 md:text-9xl md:mt-48 md:mb-24">
+      <h2 class=" px-12 border-b-[1px] md:border-b-2 md:px-28 md:pb-3 border-black">STYLEY-BOOTS</h2>
+    </div>
+
+        <!-- ----------------------------------------------------------------------4-------------------------------------------------------------- -->
+        <div class="h-max w-full p-8 md:p-20 flex md:justify-center gap-72">
+          <div class="h-max w-full  md:w-[25%] flex flex-col gap-2 md:gap-4">
+            <button routerLink="/buggy-jeans/:id" class="h-96 md:h-[640px] w-full flex justify-center items-center bg-black/90">
+              <img class="h-full w-full object-cover md:hover:h-[85%] md:hover:w-[80%] duration-1000" src="../../assets/Image/boot3.jpg" alt="">
+            </button>
+            <p class="md:hidden text-[10px] mt-3 text-green-600">LAINE RECYCLÉE - CAOUTCHOUC RECYCLÉ</p>
+            <p class="md:hidden text-[10px]">LA COLLECTION TERRA-E, UN DESIGN AUTHENTIQUE ET INTEMPOREL. UNE BASKET EN LAINE RECYCLÉE QUI VOUS OFFRE UN CONFORT INÉGALÉ.</p>
+          </div>
+          <div class="hidden md:block h-max md:h-96 md:w-[25%]">
+            <p class="mb-3 md:text-xs mt-3 text-green-600">LAINE RECYCLÉE - CAOUTCHOUC RECYCLÉ</p>
+            <p class="mb-6 md:text-xs">LA COLLECTION TERRA-E, UN DESIGN AUTHENTIQUE ET INTEMPOREL. UNE BASKET EN LAINE RECYCLÉE QUI VOUS OFFRE UN CONFORT INÉGALÉ.</p>
+            <button routerLink="/buggy-jeans/:id" class="h-96 md:h-[640px] w-full flex justify-center items-center bg-black/90">
+              <img class="h-full w-full object-cover md:hover:h-[85%] md:hover:w-[80%] duration-1000" src="../../assets/Image/boot4.jpg" alt="">
+            </button>
+          </div>
+        </div>
+
+
+
+          </div>
+          </div>
+
+
+          <!-- --------------------------------------------------------------------details-sections------------------------------------------------------------- -->
+
+
+         <div class="h-max w-full flex justify-center items-center ">
+
+          <div class="h-max w-[80%]  pt-16 flex justify-between items-start md:w-[60%] md:pt-80">
+
+            <div>
+              <h2 class="text-[7px] mb-2 text-slate-600 md:text-lg md:mb-8">Icons</h2>
+              <div *ngFor="let item of bottambar">
+                <p class="text-[6px] text-slate-400 mb-[0.5px] md:text-sm md:mb-3">{{item.name}}</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="text-[7px] mb-2 text-slate-600 md:text-lg md:mb-8">Shoes</h2>
+              <div *ngFor="let item of bottambar2">
+                <p class="text-[6px] text-slate-400 mb-[0.5px] md:text-sm md:mb-3">{{item.name}}</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="text-[7px] mb-2 text-slate-600 md:text-lg md:mb-8" >Clothing</h2>
+              <div  *ngFor="let item of bottambar3">
+                <p class="text-[6px] text-slate-400 mb-[0.5px] md:text-sm md:mb-3">{{item.name}}</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="text-[7px] md:text-lg text-slate-600 md:mb-8">Kids'</h2>
+              <div *ngFor="let item of bottambar4">
+                <p class="text-[6px] md:text-sm text-slate-400  md:mb-3">{{item.name}}</p>
+              </div>
+            </div>
+
+            </div>
+
+         </div>
+
+
+          <!-- -------------------------------------------------------------footer-bar-------------------------------------------------------- -->
+
+<div class="h-max w-full pb-20 mt-9 md:pb-0 md:mt-16 flex flex-col justify-center items-center bg-black">
+
+  <div class="w-[90%] h-32  md:h-96 md:w-[95%]  bg-black/90">
+    <div class="h-[85%] w-full  flex gap-3 md:p-16  md:pr-40 md:gap-36 ">
+      <div class="h-max w-max p-2 flex flex-col pt-[8.4px] gap-2 text-[8px] font-semibold text-slate-300 md:text-sm md:gap-5">
+        <p>FIND A STORE</p>
+        <p>BECOME A MEMBER</p>
+        <p>SIGN UP FOR EMAIL</p>
+        <p>STUDENT DISCOUNTS</p>
+        <p>Send Us Feedback</p>
+      </div>
+
+      <div class="h-max w-max p-2 text-[8px] flex flex-col gap-2 text-slate-500 md:text-sm md:gap-4 md:-mt-1">
+        <p class="text-[8px] font-semibold md:text-sm text-slate-300">GET HELP</p>
+        <p>Order Status</p>
+        <p>Delivery</p>
+        <p>Returns</p>
+        <p>Payment Options</p>
+        <p>Contact Us</p>
+      </div>
+
+      <div class="h-max w-max p-2 text-[8px] flex flex-col gap-2 text-slate-500 md:text-sm md:gap-4 md:-mt-1">
+        <p class="text-[8px] font-semibold md:text-sm text-slate-300">ABOUT US</p>
+        <p>News</p>
+        <p>Careers</p>
+        <p>Investors</p>
+        <p>Sustainability</p>
+      </div>
+
+      <span class="flex-1"></span>
+
+      <div class="h-max w-max gap-1 flex md:gap-6">
+        <p>
+          <span class="material-symbols-rounded text-[6px] md:text-2xl text-gray-400">
+            storm
+            </span>
+        </p>
+        <p>
+          <span class="material-symbols-rounded text-[6px] md:text-2xl text-gray-400">
+            fertile
+            </span>
+        </p>
+        <p>
+          <span class="material-symbols-rounded text-[6px] md:text-2xl text-gray-400">
+            sports_volleyball
+            </span>
+        </p>
+        <p>
+          <span class="material-symbols-rounded text-[6px] md:text-2xl text-gray-400">
+            podiatry
+            </span>
+        </p>
+      </div>
+
+    </div>
+  </div>
+  <div class="h-[15%] w-full pt-6 px-6 md:px-12 md:pb-6 bg-black/90 flex md:gap-4  text-gray-500">
+    <div class="flex text-[6px] md:text-sm  text-gray-500">
+      <p>
+        <span class="material-symbols-rounded text-[9px] md:text-lg md:-mt-1">
+          location_on
+          </span>
+      </p>
+      <p>Singapore</p>
+    </div>
+
+    <div class="flex text-[6px] md:text-sm text-gray-500 ml-3">
+      <p>@2023 Nike.Inc.All Right Reserved</p>
+    </div>
+
+    <span class="flex-1"></span>
+
+    <div class="flex gap-2 text-[6px] md:text-sm md:gap-6 text-gray-500 ">
+      <p>Guides</p>
+      <p>Terms of Sale</p>
+      <p>Terms of Use</p>
+      <p>Nike Privacy Policy</p>
+    </div>
+  </div>
+
+
+</div>
+
+
+</div>
+
+
+
+
