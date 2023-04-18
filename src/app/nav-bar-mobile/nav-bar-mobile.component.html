@@ -8,7 +8,7 @@
         </span>
     </div>
     <div class="favorite">
-      <span class="material-symbols-rounded text-3xl text-white">
+      <span routerLink="/wishlist" class="material-symbols-rounded text-3xl text-white">
         favorite
         </span>
     </div>
@@ -16,10 +16,10 @@
       <span class="material-symbols-rounded text-3xl text-white">
         local_mall
         </span>
-        <p *ngIf="idcount != 0" class="flex justify-center items-center rounded h-6 w-max px-1 bg-red-500/80 text-[19px] absolute top-[-8px] right-[-8px]">{{idcount}}</p>
+        <p *ngIf="bagitemcount != 0" class="flex justify-center items-center rounded-full h-6 w-max px-1 bg-red-500/80 text-lg absolute top-[-8px] right-[-8px]"> {{bagitemcount}} </p>
     </div>
     <div class="me">
-      <span class="material-symbols-rounded text-3xl text-white">
+      <span routerLink="/aboutme" class="material-symbols-rounded text-3xl text-white">
         sentiment_very_satisfied
         </span>
     </div>

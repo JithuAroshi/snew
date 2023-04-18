@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CartService } from '../cart.service';
+import { LoginAuthService } from '../service/login-auth.service';
 
 @Component({
   selector: 'app-nav-bar-mobile',
@@ -8,15 +9,17 @@ import { CartService } from '../cart.service';
 })
 export class NavBarMobileComponent {
 
-  idcount:any
+  bagitemcount:any
+  user:any
 
-  constructor( private cart : CartService ) {
+  constructor( private auth : LoginAuthService , private cart : CartService ) {
 
-  this.cart.getproduct()
-  .subscribe(res => {
-    this.idcount = res.length;
-    // console.log(this.idcount);
-  })
   }
 
+  ngAfterViewInit(): void {
+    this.cart.loaddata().subscribe(val => {
+    this.bagitemcount = val.length
+    })
+
+}
 }

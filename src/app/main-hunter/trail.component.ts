@@ -1,29 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { catchError, of, switchMap } from 'rxjs';
-import { fromFetch } from 'rxjs/fetch';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-main-hunter',
   templateUrl: './trail.component.html',
   styleUrls: ['./trail.component.scss'],
 })
+
+
+
 export class TrailComponent {
 
 
-  p = '../../assets/Image/mainshoe1.png';
-
-  pic1() {
-    this.p = '../../assets/Image/mainshoe1.png';
-  }
-  pic2() {
-    this.p = '../../assets/Image/mainshoe2.jpg';
-  }
-  pic3() {
-    this.p = '../../assets/Image/mainshoe3.jpg';
-  }
-  pic4() {
-    this.p = '../../assets/Image/mainshoe4.jpeg';
-  }
 
   catogory = [
     {
@@ -37,50 +25,6 @@ export class TrailComponent {
     },
     {
       img: '../../assets/Image/Group4.png',
-    },
-  ];
-
-  partcatogory = [
-    {
-      img: '../../assets/Image/shoeone1.jpg',
-      img2: '../../assets/Image/shoetwo1.jpg',
-      img3: '../../assets/Image/chapal1.jpg',
-      img4: '../../assets/Image/boot1.jpg',
-    },
-
-    {
-      img: '../../assets/Image/shoeone2.jpg',
-      img2: '../../assets/Image/shoetwo2.jpg',
-      img3: '../../assets/Image/chapal2.jpg',
-      img4: '../../assets/Image/boot2.jpg',
-    },
-
-    {
-      img: '../../assets/Image/shoeone3.jpg',
-      img2: '../../assets/Image/shoetwo3.jpg',
-      img3: '../../assets/Image/chapal3.jpg',
-      img4: '../../assets/Image/boot3.jpg',
-    },
-
-    {
-      img: '../../assets/Image/shoeone4.jpg',
-      img2: '../../assets/Image/shoetwo4.jpg',
-      img3: '../../assets/Image/chapal4.jpg',
-      img4: '../../assets/Image/boot4.jpg',
-    },
-
-    {
-      img: '../../assets/Image/shoeone5.jpg',
-      img2: '../../assets/Image/shoetwo5.jpg',
-      img3: '../../assets/Image/chapal5.jpg',
-      img4: '../../assets/Image/boot5.jpg',
-    },
-
-    {
-      img: '../../assets/Image/shoeone6.jpg',
-      img2: '../../assets/Image/shoetwo6.jpg',
-      img3: '../../assets/Image/chapal6.jpg',
-      img4: '../../assets/Image/boot6.jpg',
     },
   ];
 

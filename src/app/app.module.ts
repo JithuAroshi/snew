@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +19,13 @@ import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './login/login.component';
 import { DetailComponent } from './detail/detail.component';
 import { environment } from './Environment/environment';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { WishListComponent } from './wish-list/wish-list.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -30,13 +39,21 @@ import { environment } from './Environment/environment';
     SpecialComponent,
     CartComponent,
     LoginComponent,
-    DetailComponent
+    DetailComponent,
+    CheckoutComponent,
+    AboutMeComponent,
+    WishListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

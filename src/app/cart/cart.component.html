@@ -1,7 +1,11 @@
-<div class="h-max w-full p-4 pb-24">
+<div class="h-max w-full p-3 md:p-0 md:pt-36 md:bg-transparent z-50 pb-28 md:pb-0">
+
+  <div class="hidden md:block h-max w-full px-6 py-2 absolute -top-[110px] hover:bg-white/70 duration-1000">
+    <app-nav-bar></app-nav-bar>
+  </div>
 
   <ng-container *ngIf="array.length == 0" >
-    <div class="h-full w-full flex flex-col justify-center items-center">
+    <div class="h-full w-full flex flex-col justify-center items-center gap-10">
       <div class="mt-28">
         <img src="../../assets/Image/cartempty.jpg" alt="">
       </div>
@@ -18,14 +22,14 @@
 
         <div class="h-max w-full flex flex-col gap-2 md:gap-6">
 
-    <div class="h-max w-full flex justify-between items-center p-3 border-[1px] border-black md:p-6">
+    <div class="h-max w-full flex justify-between items-center p-3 border-[1px] border-black md:p-6 bg-white/70">
       <p class="text-xs font-bold md:text-base">Check delivery time & service</p>
       <button class="h-max w-max p-2 text-[8px] text-black/90 border-black/90 rounded-sm font-extrabold border-[1px] md:text-[10px]">ENTER PIN CODE</button>
     </div>
 
     <!-- -----------------------------------available-offer---------------------------------------- -->
 
-    <div class="h-max w-full flex flex-col p-3 gap-2 border-[1px] border-black md:p-6 md:gap-3">
+    <div class="h-max w-full flex flex-col p-3 gap-2 border-[1px] border-black md:p-6 md:gap-3 bg-white/70">
       <p class="text-xs font-bold md:text-base">Available Offers</p>
       <p class="text-[10px] md:text-sm">10% Instant Discount on Kotak Credit and Debit Cards on a minimum spend of Rs 3,000.TCA</p>
       <p *ngIf="Onshow!" class="text-[10px] md:text-sm">10% Instant Discount on Kotak Credit and Debit Cards on a minimum spend of Rs 3,000.TCA</p>
@@ -36,26 +40,27 @@
 
     </div>
 
+
     <!-- --------------------------------------------------------------------item-------------------------------------------------------------------- -->
 
-    <div class="h-max w-full flex p-3 gap-2 border-[1px] md:gap-4 border-black" *ngFor="let item of array" >
+    <div class="h-max w-full flex p-3 gap-2 border-[1px] md:gap-4 border-black  bg-white/70" *ngFor="let item of array" >
 
     <div class="h-28 w-[30%] md:h-32">
-      <img class="h-full w-full object-cover" src="{{item.data.postImgPath}}" alt="">
+      <img class="h-full w-full object-cover" src="{{item.data.data.postImgPath}}" alt="">
     </div>
 
     <div class="h-full w-[70%] flex flex-col gap-[5px]">
-      <h3 class="text-sm font-bold md:text-base">{{item.data.category.category}}</h3>
-      <P class="text-xs md:text-sm">{{item.data.title}}</P>
+      <h3 class="text-sm font-bold md:text-base">{{item.data.data.category.category}}</h3>
+      <P class="text-xs md:text-sm">{{item.data.data.title}}</P>
       <P class="text-[10px] text-gray-500 md:text-[12px]">Sold by:ASIAN RETAIL VENTURIES</P>
     <div class="flex gap-3 text-sm">
-      <p class="font-bold md:text-base">{{item.data.discountrate}}</p>
-      <p class="text-gray-500 line-through md:text-base">${{item.data.orginalrate}}</p>
+      <p class="font-bold md:text-base">{{item.data.data.discountrate}}</p>
+      <p class="text-gray-500 line-through md:text-base">${{item.data.data.orginalrate}}</p>
       <p class="text-green-500 md:text-base">20% OFF</p>
     </div>
     <p class="text-xs text-gray-700 font-light md:text-sm md:font-normal"> <span class="font-medium text-black">14 days </span> return available</p>
     </div>
-    <button (click)="delectitem(item)" class="h-max w-max -mt-1 ">X</button>
+    <button (click)="delectitem(item.id)" class="h-max w-max -mt-1 ">X</button>
 
     </div>
 
@@ -67,7 +72,7 @@
 
     <div class="h-max w-full ">
 
-    <div class="h-max w-full flex flex-col p-3 pr-6 gap-2 border-[1px] border-black md:p-6">
+    <div class="h-max w-full flex flex-col p-3 pr-6 gap-2 border-[1px] border-black bg-white/80 md:p-6">
 
       <div class="text-xs font-bold md:text-[15px]">PRICE DETAILS <span>(1 Item)</span> </div>
       <div class="h-max w-full flex justify-between">
@@ -94,7 +99,7 @@
       <p class="text-sm font-bold text-gray-800 md:text-[15px]">Total Amount</p>
       <p class="text-sm font-bold text-black md:text-[15px]">$ {{grandtotal}}</p>
     </div>
-    <button class="h-max w-full flex justify-center items-center p-3 text-sm font-bold rounded-sm mt-4 bg-black/90 text-white active:bg-white active:text-black active:border-2 active:border-black md:text-[15px]">
+    <button routerLink="/checkout" class="h-max w-full flex justify-center items-center p-3 text-sm font-bold rounded-sm mt-4 bg-black/90 text-white active:bg-white active:text-black active:border-2 active:border-black md:text-[15px]">
     PLACE ORDER
     </button>
       </div>

@@ -17,12 +17,13 @@ export class DetailComponent {
 
   }
 
-  addtocart(cartitem:any){
+  addtocart(){
+this.cart.addtocart(this.array)
+}
 
-this.cart.addtocart(cartitem)
-this.cart.getid(this.array.length)
-
-  }
+addtowish(){
+this.cart.addtowishlist(this.array)
+}
 
 }
 

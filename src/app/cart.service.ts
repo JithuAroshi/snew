@@ -1,69 +1,97 @@
 import { Injectable } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { BehaviorSubject } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
+  id: any;
+  bagNo = 0;
+  length:any
 
-  id:any;
-  public cartitem:any = []
-  public productlist = new BehaviorSubject<any>([])
+  constructor(private afs: AngularFirestore) {}
 
-  constructor() { }
 
-getproduct(){
-  return this.productlist.asObservable()
-}
-
-setproduct(product:any){
-  this.cartitem.push(...product)
-this.productlist.next(product)
-}
-
-addtocart(product:any){
-this.cartitem.push(product)
-this.productlist.next(this.cartitem)
-this.gettotalprice();
-this.gettotaldiscount();
-}
-
-gettotalprice(){
-let grandtotal = 0;
-this.cartitem.map((a:any)=>{
-  grandtotal += a.data.discountrate
-})
-return grandtotal
-}
-
-gettotaldiscount(){
-  let totaldiscount = 0;
-  this.cartitem.map((a:any)=>{
-    totaldiscount += a.data.orginalrate - a.data.discountrate
-  })
-  return totaldiscount
-}
-
-removeitem(product:any){
-this.cartitem.map((a:any , index:any)=>{
-  if(product.id === a.id){
-    this.cartitem.splice(index,1)
-    this.productlist.next(this.cartitem)
+  addtocart(product: any) {
+    this.afs
+      .collection('carts')
+      .add(product)
+      .then((docRef) => {
+        // console.log('success');
+      });
   }
-})
+
+  addtowishlist(product: any) {
+    this.afs
+      .collection('wishlist')
+      .add(product)
+      .then((docRef) => {
+        // console.log('success');
+      });
+  }
+
+  loaddata() {
+    return this.afs
+      .collection('carts')
+      .snapshotChanges()
+      .pipe(
+        map((action) => {
+          return action.map((a) => {
+            const data = a.payload.doc.data();
+            const id = a.payload.doc.id;
+            const length = a.payload.doc.data.length
+            return { data, id , length };
+          });
+        })
+      );
+  }
+
+  loadwishdata() {
+    return this.afs
+      .collection('wishlist')
+      .snapshotChanges()
+      .pipe(
+        map((action) => {
+          return action.map((a) => {
+            const data = a.payload.doc.data();
+            const id = a.payload.doc.id;
+            return { data, id };
+          });
+        })
+      );
+  }
+
+  delectData(id: any) {
+    this.afs
+      .doc(`carts/${id}`)
+      .delete()
+      .then(() => {
+        // console.log(id);
+      });
+  }
+
+  delectwishData(id: any) {
+    this.afs
+      .doc(`wishlist/${id}`)
+      .delete()
+      .then(() => {
+        // console.log(id);
+      });
+  }
+
+  setbagNO(num:any){
+  this.bagNo = num
+  console.log(this.bagNo);
+
 }
 
-removeallitem(){
-  this.cartitem = [];
-  this.productlist.next(this.cartitem)
-}
+getBagNo(){
+  // console.log(this.bagNo);
+  console.log(this.bagNo);
+  this.bagNo
 
-getid(count:any){
-this.id = count
-}
-
-setid(){
-  return this.id
-}
+  }
 
 }
