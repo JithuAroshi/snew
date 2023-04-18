@@ -88,13 +88,13 @@ local_mall
 
 </div>
 
-<button (click)="accswitch()" class="relative md:hidden h-14 md:h-28 md:w-28 pt-1 md:pl-10  ">
+<button (click)="accswitch()" class="md:hidden h-14 md:h-28 md:w-28 pt-1 md:pl-10  ">
   <span class="material-symbols-rounded text-white text-3xl">
     account_circle
     </span>
 </button>
-<div class="md:hidden h-[40vh] w-2/3 absolute top-16 right-0  bg-black z-50 flex flex-col justify-between items-center rounded-sm" *ngIf="accswi">
-  <div *ngIf="Users" class="w-full flex flex-col justify-center items-center p-3 pt-4">
+<div class="md:hidden h-[40vh] w-2/3 absolute top-16 right-0  bg-black  flex flex-col justify-between items-center rounded-sm" *ngIf="accswi">
+  <div *ngIf="Users" class="w-full flex flex-col justify-center items-center p-3 pt-4 ">
 
     <img class="h-[50%] w-[36%] bg-[rgb(216,27,96)] object-contain rounded-full"
     src="https://api.dicebear.com/5.x/initials/svg?seed={{Users[0].data.firstname}}"
