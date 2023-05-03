@@ -509,7 +509,7 @@
 <div class="w-full h-max flex flex-wrap justify-center md:justify-start gap-2 md:gap-16 p-1 md:pr-5 pb-24 md:pt-10 md:px-32 mt-16 md:mt-0 ">
 
 
-  <div class="h-[280px] w-44 md:h-96 md:w-64 rounded-md overflow-hidden border-[1px] border-gray-500 drop-shadow-15xl bg-white  -z-50 " *ngFor="let bug of postarray , let i = index" >
+  <div class="h-[280px] w-44 md:h-96 md:w-64 rounded-md overflow-hidden border-[1px] border-gray-500 drop-shadow-15xl bg-white  " *ngFor="let bug of postarray , let i = index" >
       <div (click)="addtodetail(i)" routerLink="/detail" class="h-[72%] w-full p-2 relative " >
         <img class="object-cover h-full w-full overflow-hidden rounded-md border-[1px] border-gray-500" [src]="bug.data.postImgPath" alt="">
 

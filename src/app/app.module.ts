@@ -12,8 +12,6 @@ import { TrailComponent } from './main-hunter/trail.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NavBarMobileComponent } from './nav-bar-mobile/nav-bar-mobile.component';
 import { BuggyJeansComponent } from './buggy-jeans/buggy-jeans.component';
-import { LehengaComponent } from './lehenga/lehenga.component';
-import { MehndiComponent } from './mehndi/mehndi.component';
 import { SpecialComponent } from './special/special.component';
 import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './login/login.component';
@@ -34,8 +32,6 @@ import {HttpClientModule} from "@angular/common/http";
     NavBarComponent,
     NavBarMobileComponent,
     BuggyJeansComponent,
-    LehengaComponent,
-    MehndiComponent,
     SpecialComponent,
     CartComponent,
     LoginComponent,
